@@ -161,8 +161,9 @@ void show_weather(void) {
 }
 
 void play_music(const char* filename) {
-    
-    system("ffplay rickroll.mp3");
+    char* execute = "ffplay \"";
+    strcat(execute, filename);
+    strcat(execute, "\"");
     speak_text("Playing music");
 }
 
